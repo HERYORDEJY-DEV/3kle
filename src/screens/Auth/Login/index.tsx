@@ -25,6 +25,8 @@ export default function Login() {
       />
       <AuthHeader />
       <StyledContentLayout
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           // justifyContent: 'center',

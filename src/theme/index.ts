@@ -28,9 +28,23 @@ export const lightTheme = {
     deepBlue: palette.blue,
     deepBlueAlt: '#D1D6E9',
     primaryBlue: '#2494F2',
-    text: '#555555',
-    buttonPrimary: '#4D90FD',
-    buttonTitle: '#FAFAFA',
+    backgroundPurple: '#7F19D0',
+    backgroundPurpleAlt: '#F2E1FF',
+    barPurple: '#7F18D0',
+    barPurpleAlt1: '#EDD9FC',
+    barPurpleAlt2: '#E3DFF6',
+    itemBackground1: '#F4F4F4',
+    itemBackground2: '#EDEEF7',
+    itemBackground3: '#F7F7F7',
+    itemSelectedBackground: '#C2C7FF',
+    itemSelectedText: '#4B4B4B',
+    pieBlue1: '#1826D0',
+    pieBlueAlt: '#EDEEF7',
+    textGrey: '#4B4B4B',
+    textBlue: '#080D45',
+    buttonPrimary: '#7F18D0',
+    buttonPrimaryTitle: '#F7F7F7',
+    growBackground: '#FBFAFA',
   },
 
   fontFamily: {
@@ -64,11 +78,11 @@ export const lightTheme = {
   },
   borders: {
     light: '1px solid rgba(228, 228, 228, 0.6)',
-    primary: ' 1px solid #2082D5',
+    primary: ' 1px solid ##F2E1FF',
   },
   background: {
     primary: {
-      backgroundColor: '#2494F2',
+      backgroundColor: '#7F19D0',
     },
   },
 };

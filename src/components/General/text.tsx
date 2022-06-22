@@ -8,6 +8,8 @@ interface Props extends TextProps {
   family?: string;
   color?: string;
   size?: string;
+  height?: number;
+  textAlign?: string;
 }
 
 export default function CustomText({family = 'regular', ...props}: Props) {
@@ -30,6 +32,9 @@ export default function CustomText({family = 'regular', ...props}: Props) {
       case 'light':
         return theme.fontFamily.light;
 
+      case 'bold':
+        return theme.fontFamily.bold;
+
       default:
         break;
     }
@@ -37,9 +42,11 @@ export default function CustomText({family = 'regular', ...props}: Props) {
 
   return (
     <StyledText
+      numberOfLines={2}
       {...props}
       size={props.size}
       family={fontFamily(family ?? 'regular')}
+      height={props.height}
     >
       {props.children}
     </StyledText>

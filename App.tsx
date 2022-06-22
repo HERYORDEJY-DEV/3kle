@@ -29,9 +29,8 @@ import {
 import {ThemeProvider} from 'styled-components';
 import {lightTheme} from './src/theme';
 import CustomText from './src/components/General/text';
-import Login from './src/screens/Auth/Login';
-import Register from './src/screens/Auth/Register';
-import RegisterFinal from './src/screens/Auth/Register/final';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import RootNavigation from './src/navigation';
 
 const Section: React.FC<{
   title: string;
@@ -72,7 +71,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      <RegisterFinal />
+      <SafeAreaProvider>
+        <RootNavigation />
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 };

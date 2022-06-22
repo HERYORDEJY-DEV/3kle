@@ -12,8 +12,8 @@ export const StyledButtonContainer = styled(TouchableOpacity)`
   flex-direction: row;
   height: 50px;
   background-color: ${p => p.theme.colors.buttonPrimary};
-  margin: 20px 10px;
-  border-radius: 4px;
+  margin: 20px;
+  border-radius: 6px;
   align-items: center;
   justify-content: center;
 `;

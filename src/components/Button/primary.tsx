@@ -38,7 +38,7 @@ export default function ButtonPrimary({
       {loading ? (
         <ActivityIndicator
           size={'small'}
-          color={theme.colors.buttonTitle}
+          color={theme.colors.buttonPrimaryTitle}
           style={styles.icon}
         />
       ) : (
@@ -47,15 +47,19 @@ export default function ButtonPrimary({
             (typeof props.prefixIcon === 'string' ? (
               <MaterialCommmunityIcons
                 name={String(props.prefixIcon)}
-                color={theme.colors.buttonTitle}
+                color={theme.colors.buttonPrimaryTitle}
                 size={25}
               />
             ) : (
               props.prefixIcon
             ))}
-          <CustomText color={theme.colors.buttonTitle} family={'semiBold'}>
+          <CustomText
+            color={theme.colors.buttonPrimaryTitle}
+            family={'bold'}
+            size={'16'}
+          >
+            {props.prefixIcon ? '  ' : ''}
             {title}
-            {'  '}
           </CustomText>
         </Fragment>
       )}

@@ -25,7 +25,11 @@ export default function RegisterFinal() {
         barStyle={'light-content'}
       />
       <AuthHeader />
-      <StyledContentLayout showsVerticalScrollIndicator={false}>
+      <StyledContentLayout
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+      >
         {/* <StyledAuthTitle>Create your customer account</StyledAuthTitle> */}
         <StyledAuthTitle>Final Step</StyledAuthTitle>
         <View>

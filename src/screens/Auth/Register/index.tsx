@@ -25,7 +25,11 @@ export default function Register() {
         barStyle={'light-content'}
       />
       <AuthHeader />
-      <StyledContentLayout showsVerticalScrollIndicator={false}>
+      <StyledContentLayout
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+      >
         <StyledAuthTitle>Create your customer account</StyledAuthTitle>
         <StyledAuthTitle sub={true}>
           Registering a customer account is fast and free - no commitments and
