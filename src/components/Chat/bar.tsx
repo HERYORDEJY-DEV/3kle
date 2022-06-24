@@ -1,7 +1,5 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
-import {VictoryBar, VictoryStack} from 'victory-native';
-import responsive from '../../utils/responsive';
 import {useTheme} from 'styled-components';
 import {StyledChartBar} from './styles';
 

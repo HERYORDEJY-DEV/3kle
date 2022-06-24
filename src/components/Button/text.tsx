@@ -38,7 +38,7 @@ export default function ButtonText({
       {loading ? (
         <ActivityIndicator
           size={'small'}
-          color={theme.colors.text}
+          color={theme.colors.textGrey}
           style={styles.icon}
         />
       ) : (
@@ -47,13 +47,13 @@ export default function ButtonText({
             (typeof props.prefixIcon === 'string' ? (
               <MaterialCommmunityIcons
                 name={String(props.prefixIcon)}
-                color={theme.colors.text}
+                color={theme.colors.textGrey}
                 size={25}
               />
             ) : (
               props.prefixIcon
             ))}
-          <CustomText color={theme.colors.text} family={'semiBold'}>
+          <CustomText color={theme.colors.textGrey} family={'semiBold'}>
             {title}
             {'  '}
           </CustomText>

@@ -1,4 +1,5 @@
 import {Dimensions, PixelRatio} from 'react-native';
+
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
 
 const addPx = (value: string | number) => `${value}px`;

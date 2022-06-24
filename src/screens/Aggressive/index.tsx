@@ -1,4 +1,4 @@
-import {View, Text, StatusBar} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import React, {useState} from 'react';
 import {styles} from './styles';
 import {
@@ -9,7 +9,6 @@ import {
 import NavBar from '../../components/Nav-Bar';
 import {StyledScreenTitle} from '../FamilyPlus/styles';
 import {useTheme} from 'styled-components';
-import ButtonPrimary from '../../components/Button/primary';
 import MCI from 'react-native-vector-icons/MaterialCommunityIcons';
 import PortfolioBreakDown from '../../components/Aggressive/breakdown';
 import PortfolioSelected from '../../components/Button/portfolio-selected';

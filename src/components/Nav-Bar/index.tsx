@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import React from 'react';
 import {StyledNavBarContainer} from './styles';
 import Svgs from '../../assets/svg';

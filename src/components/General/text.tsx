@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Text, TextProps} from 'react-native';
+import {TextProps} from 'react-native';
 import {StyledText} from './styles';
 import {useTheme} from 'styled-components';
 

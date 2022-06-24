@@ -1,17 +1,9 @@
 import React, {Fragment} from 'react';
-import {
-  TouchableOpacity,
-  Text,
-  View,
-  ActivityIndicator,
-  TouchableOpacityProps,
-  ViewStyle,
-} from 'react-native';
+import {TouchableOpacityProps, ViewStyle} from 'react-native';
 import {useTheme} from 'styled-components';
 import CustomText from '../General/text';
-import MaterialCommmunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {styles, StyledButtonContainer} from './styles';
+import {StyledButtonContainer} from './styles';
 
 interface Props extends TouchableOpacityProps {
   containerStyle?: ViewStyle;

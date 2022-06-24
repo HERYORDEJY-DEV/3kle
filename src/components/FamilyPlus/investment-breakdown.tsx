@@ -1,9 +1,9 @@
-import {View, Text} from 'react-native';
-import React, {Fragment, useState} from 'react';
+import {View} from 'react-native';
+import React, {useState} from 'react';
 import {useTheme} from 'styled-components';
 import Svgs from '../../assets/svg';
 import {FlexRow} from '../General/styles';
-import {StyledInvestmentMenuItem, styles} from './styles';
+import {styles} from './styles';
 import CustomText from '../General/text';
 
 const {ArrowRight} = Svgs;

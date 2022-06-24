@@ -1,4 +1,4 @@
-import {View, Text, StatusBar, Animated} from 'react-native';
+import {View,  StatusBar, Animated} from 'react-native';
 import React, {useRef, useState} from 'react';
 import {
   FlexRow,

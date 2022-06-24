@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import {Text, TextInputProps, View} from 'react-native';
+import { TextInputProps,} from 'react-native';
 import {
   StyledTextInputContainer,
   StyledTextInput,
@@ -9,8 +9,6 @@ import {
 } from './styles';
 import MaterialCommmunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import Feather from 'react-native-vector-icons/Feather';
-import {StyledText} from '../General/styles';
 import {useTheme} from 'styled-components';
 
 interface Props extends TextInputProps {

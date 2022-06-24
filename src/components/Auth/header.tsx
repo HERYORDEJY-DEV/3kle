@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {Image, Text, View} from 'react-native';
 import {StyledAuthHeader, StyledAuthHeaderImage} from './styles';
 
 export default function AuthHeader() {
