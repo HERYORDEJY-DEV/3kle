@@ -1,19 +1,28 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Dimensions} from 'react-native';
 import styled from 'styled-components';
 import CustomText from '../../../components/General/text';
 import responsive from '../../../utils/responsive';
+import Animated from 'react-native-reanimated';
+
+const {width, height} = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
   paginationIcon: {
     paddingHorizontal: 2.5,
   },
+  renderContainer: {
+    padding: 10,
+    width,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
-export const StyledRenderContent = styled(View)`
+export const StyledRenderContent = styled(Animated.View)`
   align-items: center;
   justify-content: center;
   padding: 20px;
-  width: ${responsive.width(100)};
+  width: ${responsive.width(100, true)};
 `;
 
 export const StyledGetStartedTitle = styled(CustomText)`
@@ -33,5 +42,5 @@ export const StyledGetStartedSubtitle = styled(CustomText)`
   letter-spacing: -0.233684px;
   color: #333333;
   padding: 10px 0px;
-  width: ${responsive.width(80)};
+  width: ${responsive.width(80, true)};
 `;

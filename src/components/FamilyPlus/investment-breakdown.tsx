@@ -1,5 +1,5 @@
 import {View} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {useTheme} from 'styled-components';
 import Svgs from '../../assets/svg';
 import {FlexRow} from '../General/styles';
@@ -10,7 +10,6 @@ const {ArrowRight} = Svgs;
 
 export default function FamilyPlusInvestmentBreakdown() {
   const theme = useTheme();
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const renderMenuItem = ({
     title,

@@ -9,9 +9,6 @@ import CustomText from '../General/text';
 const {FamilyPlus, InvestStocks, User} = Svgs;
 
 export default function FamilyPlusInvestmentTypes() {
-  const theme = useTheme();
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const renderMenuItem = ({
     title,
     icon,

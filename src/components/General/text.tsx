@@ -15,8 +15,8 @@ interface Props extends TextProps {
 export default function CustomText({family = 'regular', ...props}: Props) {
   const theme = useTheme();
 
-  const fontFamily = (family: string) => {
-    switch (family) {
+  const fontFamily = (f: string) => {
+    switch (f) {
       case 'regular':
         return theme.fontFamily.regular;
 

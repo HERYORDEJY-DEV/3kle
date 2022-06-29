@@ -1,4 +1,4 @@
-import {View, ImageBackground, ScrollView, Animated} from 'react-native';
+import {View, ImageBackground, ScrollView, Dimensions} from 'react-native';
 import React, {Fragment, useState} from 'react';
 import {
   styles,
@@ -12,16 +12,32 @@ import {useTheme} from 'styled-components';
 import {FlexRow} from '../General/styles';
 import MCI from 'react-native-vector-icons/MaterialCommunityIcons';
 import responsive from '../../utils/responsive';
-
-const responsiveWidth = responsive.width(100);
+import Animated, {
+  useSharedValue,
+  useDerivedValue,
+  useAnimatedScrollHandler,
+} from 'react-native-reanimated';
+import PaginationDot from '../General/pagin-dot';
 
 const {FamlyPlusDashboard} = Images;
 
-const fullScreenWidth = responsive.width(100);
+const {width} = Dimensions.get('window');
 
 export default function FamilyPlusDashboardCard() {
   const theme = useTheme();
-  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const sharedValue = useSharedValue(0);
+
+  const onScrollHandler = useAnimatedScrollHandler({
+    onScroll: event => {
+      const {x} = event.contentOffset;
+      sharedValue.value = x;
+    },
+  });
+
+  const activeIndexValue = useDerivedValue(() => {
+    return Math.round(sharedValue.value / width);
+  });
 
   const renderDashboardButton = ({
     title,
@@ -65,52 +81,33 @@ export default function FamilyPlusDashboardCard() {
     </ImageBackground>
   );
 
-  const renderPagination = () => (
-    <FlexRow justifyContent="center">
-      {data.map((item: any, index: number) => (
-        <MCI
-          key={index}
-          name={
-            currentIndex == index
-              ? 'checkbox-blank-circle-outline'
-              : 'checkbox-blank-circle'
-          }
-          size={10}
-          color={theme.colors.barPurple}
-          style={styles.paginationIcon}
-        />
-      ))}
-    </FlexRow>
-  );
-
-  const onScroll = (contentOffset: {x: number; y: number}) => {
-    const {x} = contentOffset;
-    const index = x / Number(responsive.width(100));
-    setCurrentIndex(Math.ceil(index));
-  };
-
   return (
     <Fragment>
       <View style={{minHeight: 193}}>
-        <ScrollView
+        <Animated.ScrollView
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           horizontal={true}
-          snapToInterval={+fullScreenWidth}
-          onScroll={Animated.event([], {
-            listener: (event: any) => {
-              onScroll(event?.nativeEvent?.contentOffset);
-            },
-            useNativeDriver: false,
-          })}
-          style={{width: Number(responsiveWidth)}}
+          snapToInterval={width}
+          onScroll={onScrollHandler}
         >
           {data.map((item: any, index: number) =>
             renderContent({...item, index}),
           )}
-        </ScrollView>
+        </Animated.ScrollView>
       </View>
-      {renderPagination()}
+      <FlexRow justifyContent="center">
+        {data.map((item: any, index: number) => (
+          <PaginationDot
+            key={`${index}`}
+            dotIndex={index}
+            activeDotIndex={activeIndexValue}
+            borderColor={theme.colors.barPurple}
+            borderWidth={1}
+            backgroundColor={'transparent'}
+          />
+        ))}
+      </FlexRow>
     </Fragment>
   );
 }

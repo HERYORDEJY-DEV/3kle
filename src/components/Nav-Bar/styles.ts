@@ -1,6 +1,4 @@
 import {Pressable, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import styled from 'styled-components';
 
 export const StyledNavBarContainer = styled(View)`

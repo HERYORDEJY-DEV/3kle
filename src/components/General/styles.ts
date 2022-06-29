@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {ScrollView, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import Animated from 'react-native-reanimated';
 
 export const StyledText = styled(Text)<{
   family?: string;
@@ -23,7 +24,7 @@ export const StyledContainerLayout = styled(SafeAreaView)`
   height: 100%;
 `;
 
-export const StyledContentLayout = styled(ScrollView)<{
+export const StyledContentLayout = styled(Animated.ScrollView)<{
   backgroundColor?: string;
 }>`
   background-color: ${p => p.backgroundColor ?? 'transparent'};

@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import { TextInputProps,} from 'react-native';
+import {TextInputProps} from 'react-native';
 import {
   StyledTextInputContainer,
   StyledTextInput,
@@ -27,7 +27,7 @@ export default function InputText(props: Props) {
         <StyledTextInputLabel>
           {props.label}
           {props.required && (
-            <StyledTextInputLabel rquired={props.required}>
+            <StyledTextInputLabel required={props.required}>
               *
             </StyledTextInputLabel>
           )}
@@ -39,7 +39,7 @@ export default function InputText(props: Props) {
             {typeof props.prefixIcon === 'string' ? (
               <MaterialIcons
                 name={props.prefixIcon}
-                color={theme.colors.text}
+                color={theme.colors.textGrey}
                 size={25}
               />
             ) : (
@@ -49,13 +49,13 @@ export default function InputText(props: Props) {
         )}
         <StyledTextInput
           {...props}
-          placeholderTextColor={theme.colors.text + 90}
+          placeholderTextColor={theme.colors.textGrey + 90}
           secureTextEntry={props.type === 'auth'}
         />
         {props.type === 'auth' && (
           <MaterialCommmunityIcons
             name={'eye-outline'}
-            color={theme.colors.text}
+            color={theme.colors.textGrey}
             size={25}
           />
         )}
@@ -64,7 +64,7 @@ export default function InputText(props: Props) {
             {typeof props.suffixIcon === 'string' ? (
               <MaterialCommmunityIcons
                 name={props.suffixIcon}
-                color={theme.colors.text}
+                color={theme.colors.textGrey}
                 size={25}
               />
             ) : (

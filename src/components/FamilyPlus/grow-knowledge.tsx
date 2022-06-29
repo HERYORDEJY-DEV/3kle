@@ -10,7 +10,6 @@ const {WalletO, Users, FamilyPlusO, RotateRight} = Svgs;
 
 export default function FamilyPlusInvestmentGrow() {
   const theme = useTheme();
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const renderMenuItem = ({
     title,

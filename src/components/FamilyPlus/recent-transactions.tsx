@@ -1,20 +1,18 @@
 import {View} from 'react-native';
-import React, { useState} from 'react';
+import React from 'react';
 import {useTheme} from 'styled-components';
 import Svgs from '../../assets/svg';
 import {FlexRow} from '../General/styles';
-import { StyledRecentHeader, styles} from './styles';
+import {StyledRecentHeader, styles} from './styles';
 import CustomText from '../General/text';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import ButtonPrimary from '../Button/primary';
-import {useNavigation} from '@react-navigation/native';
+interface Props {
+  onViewAll: () => void;
+}
 
-const {ArrowRight} = Svgs;
-
-export default function FamilyPlusInvestmentRecent() {
+export default function FamilyPlusInvestmentRecent(props: Props) {
   const theme = useTheme();
-  const navigation = useNavigation();
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const renderMenuItem = ({
     title,
@@ -60,7 +58,7 @@ export default function FamilyPlusInvestmentRecent() {
       </StyledRecentHeader>
       {data.map((item: any, index) => renderMenuItem({...item}))}
       <ButtonPrimary
-        onPress={() => navigation.navigate({name: 'AggressivePortfolio'})}
+        onPress={props.onViewAll}
         title={'View All'}
         containerStyle={{
           marginLeft: 0,

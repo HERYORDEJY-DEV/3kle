@@ -1,8 +1,5 @@
 import React, {Fragment} from 'react';
 import {
-  TouchableOpacity,
-  Text,
-  View,
   ActivityIndicator,
   TouchableOpacityProps,
   ViewStyle,

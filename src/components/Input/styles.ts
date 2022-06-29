@@ -33,16 +33,16 @@ export const StyledTextInput = styled(TextInput)`
   font-family: ${p => p.theme.fontFamily.regular};
   font-size: ${p => p.theme.fontSize.s};
   line-height: 1.42857143px;
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.textGrey};
   flex: 1;
   background-color: transparent;
   padding: 0 5px;
 `;
 
-export const StyledTextInputLabel = styled(CustomText)<{rquired?: boolean}>`
+export const StyledTextInputLabel = styled(CustomText)<{required?: boolean}>`
   font-family: ${p => p.theme.fontFamily.light};
   font-size: ${p => p.theme.fontSize.custom(14)};
-  color: ${p => (p.rquired ? p.theme.colors.red : p.theme.colors.text)};
+  color: ${p => (p.required ? p.theme.colors.red : p.theme.colors.textGrey)};
   padding-top: 5px;
   padding-left: 10px;
 `;

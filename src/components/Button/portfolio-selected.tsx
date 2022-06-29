@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {TouchableOpacityProps, ViewStyle} from 'react-native';
 import {useTheme} from 'styled-components';
 import CustomText from '../General/text';

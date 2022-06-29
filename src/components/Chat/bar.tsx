@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useTheme} from 'styled-components';
 import {StyledChartBar} from './styles';
@@ -7,8 +7,6 @@ import {styles} from './styles';
 import CustomText from '../General/text';
 
 export default function BarChart() {
-  const theme = useTheme();
-
   const renderBar = ({
     label,
     value,

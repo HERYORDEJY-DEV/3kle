@@ -26,7 +26,7 @@ export const StyledRenderContent = styled(View)`
   align-items: center;
   justify-content: center;
   padding: 20px 40px;
-  width: ${responsive.width(100)};
+  width: ${responsive.width(100, true)};
 `;
 
 export const StyledScreenTitle = styled(CustomText)`

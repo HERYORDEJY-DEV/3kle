@@ -1,11 +1,12 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import GetStarted from '../screens/Auth/GetStarted';
 import {NavigationContainer} from '@react-navigation/native';
+import GetStarted from '../screens/Auth/GetStarted';
 import FamilyPlusDashboard from '../screens/FamilyPlus';
 import AggressivePortfolio from '../screens/Aggressive';
+import {RootStackParamList} from './types';
 
-const {Navigator, Screen} = createStackNavigator();
+const {Navigator, Screen} = createStackNavigator<RootStackParamList>();
 
 export default function RootNavigation() {
   return (

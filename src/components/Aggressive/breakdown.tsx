@@ -15,7 +15,6 @@ export default function PortfolioBreakDown() {
 
   const renderBreakdownItem = ({
     title,
-    value,
     index,
   }: {
     title: string;
@@ -57,7 +56,7 @@ export default function PortfolioBreakDown() {
         </CustomText>
         <CustomText size="12">Returns 10-15%</CustomText>
       </View>
-      <FlexRow></FlexRow>
+      <FlexRow />
     </FlexRow>
   );
 

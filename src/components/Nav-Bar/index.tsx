@@ -29,7 +29,7 @@ export default function NavBar({
   return (
     <StyledNavBarContainer>
       {showBackButton &&
-        (theme == 'blue' ? (
+        (theme === 'blue' ? (
           <TouchableOpacity onPress={onGoBack} style={{paddingRight: 10}}>
             <ArrowLeft />
           </TouchableOpacity>
