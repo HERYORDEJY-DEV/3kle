@@ -85,6 +85,7 @@ export default function FamilyPlusDashboardCard() {
     <Fragment>
       <View style={{minHeight: 193}}>
         <Animated.ScrollView
+          disableIntervalMomentum={true}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           horizontal={true}

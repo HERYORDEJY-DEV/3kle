@@ -9,11 +9,9 @@ import {
 import NavBar from '../../components/Nav-Bar';
 import {StyledScreenTitle} from '../FamilyPlus/styles';
 import {useTheme} from 'styled-components';
-import MCI from 'react-native-vector-icons/MaterialCommunityIcons';
-// import PortfolioBreakDown from '../../components/Aggressive/breakdown';
+import PortfolioBreakDown from '../../components/Aggressive/breakdown';
 import PortfolioSelected from '../../components/Button/portfolio-selected';
 import Svgs from '../../assets/svg';
-import {VictoryPie} from 'victory-native';
 import responsive from '../../utils/responsive';
 import Animated, {
   useAnimatedScrollHandler,
@@ -21,6 +19,7 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 import PaginationDot from '../../components/General/pagin-dot';
+import AggressiveChartItem from '../../components/Aggressive/aggressive-chart';
 
 const {QuestionC} = Svgs;
 
@@ -92,34 +91,16 @@ export default function AggressivePortfolio() {
           ))}
         </FlexRow>
         <Animated.ScrollView
+          disableIntervalMomentum={true}
           horizontal={true}
-          snapToInterval={Number(responsive.width(100))}
+          snapToInterval={width}
           onScroll={onScrollHandler}
         >
           {[...pieData].map((item: any, index: number) => (
-            <View style={{alignItems: 'center'}} key={index}>
-              <VictoryPie
-                height={250}
-                innerRadius={30}
-                radius={70}
-                style={{
-                  data: {fill: ({datum}) => datum.fill},
-
-                  labels: {
-                    fontSize: 12,
-                    fill: theme.colors.textBlue,
-                    fontFamily: theme.fontFamily.semiBold,
-                    flex: 1,
-                    flexWrap: 'wrap',
-                    flexGrow: 0,
-                  },
-                }}
-                data={pieData}
-              />
-            </View>
+            <AggressiveChartItem key={`${index}`} data={pieData} />
           ))}
         </Animated.ScrollView>
-        {/* <PortfolioBreakDown /> */}
+        <PortfolioBreakDown />
         <PortfolioSelected />
       </StyledContentLayout>
     </StyledContainerLayout>

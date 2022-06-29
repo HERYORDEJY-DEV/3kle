@@ -68,11 +68,12 @@ export default function GetStarted() {
       <NavBar showCloseButton={true} />
       <View style={{minHeight: responsive.height(60)}}>
         <Animated.ScrollView
+          disableIntervalMomentum={true}
           pagingEnabled={true}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           horizontal={true}
-          snapToInterval={Math.round(width)}
+          snapToInterval={width}
           scrollEventThrottle={16}
           onScroll={onScrollHandler}
         >
